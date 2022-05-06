@@ -58,7 +58,7 @@ def copy_url(task_id: TaskID, url: str, path: str) -> None:
     print(f"[#1d4b6e][{strftime('%H:%M:%S')}][/] [#8dc789]Downloaded {os.path.abspath(path)}[/]")
 
 
-def dl(urls, dest_dir: str):
+def dl(urls: list, dest_dir: str = ".") -> None:
     if not os.path.isdir(dest_dir):
         os.makedirs(dest_dir, exist_ok=True)
     with progress:
